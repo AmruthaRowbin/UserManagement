@@ -1,0 +1,115 @@
+.baground{
+    background-color: blueviolet;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.logo{
+    background-color: blueviolet;
+    width: 50%;
+    height: 100vh;
+    
+}
+
+.login{
+    margin: 0%;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.logoimg{
+    margin-top: 15rem;
+    width: 25vh;
+    height: 25vh;
+}
+
+.form{
+    background-color: bluevioletgreen;
+    width: 50%;
+    height: 100vh;
+}
+.input1{
+    width: 50%;
+    height: 30px;
+    margin-top: 3rem;
+    border-radius: 20px;
+    padding-left: 20px;
+    border: 2px solid blueviolet;
+
+}
+
+
+
+.input{
+    width: 50%;
+    padding-left: 20px;
+    height: 30px;
+    border: 2px solid blueviolet;
+    margin-top: 2rem;
+    border-radius: 20px;
+}
+
+.formcontainer{
+    background-color: white;
+    height: 50vh;
+    border-radius: 30px;
+    width: 70%;
+    margin-top: 9rem;
+    margin-left: 17%;
+    padding-top: 2rem;
+
+}
+
+.button1{
+    border-radius: 20px;
+    border: 1px;
+    margin-right: 5%;
+    height: 30px;
+    width: 80px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.button2{
+    border-radius: 20px;
+    border: 1px;
+    margin-right: 5%;
+    height: 30px;
+    width: 80px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+
+.buttons{
+    margin-top: 2rem;
+}
+
+.fp{
+    left: 0%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .formcontainer{
+      background-color: white;
+    }
+    .form{
+        width: 100%;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .input{
+        width: 70%;
+    }
+
+    .input1{
+        width: 70%;
+    }
+  
+    }
