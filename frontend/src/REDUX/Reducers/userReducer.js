@@ -55,7 +55,7 @@ export const userHomeReducer = (state = {}, action) => {
     case HOME_FAIL:
       return { loading: false, error: action.payload };
     default:
-      return state;
+      return  state;
   }
 };
 

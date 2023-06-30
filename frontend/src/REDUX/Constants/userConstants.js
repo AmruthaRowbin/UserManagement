@@ -8,7 +8,7 @@ export const USER_SIGNUP_REQUEST = "USER_SIGNUP_REQUEST";
 export const USER_SIGNUP_SUCCESS ="USER_SIGNUP_SUCCESS";
 export const USER_SIGNUP_FAIL = "USER_SIGNUP_FAIL" ;
 
-
+ 
 export const HOME_REQUEST = "HOME_REQUEST";
 export const HOME_SUCCESS = "HOME_SUCCESS";
 export const HOME_FAIL = "HOME_FAIL";

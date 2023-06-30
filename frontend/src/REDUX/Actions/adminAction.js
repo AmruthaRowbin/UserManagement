@@ -101,10 +101,10 @@ export const adminuserBlock = (id) => async (dispatch) => {
 };
 
 
-export const admindeleteUser = (id) => async(dispatch)=>{
-  
+export const admindeleteUser = (id) => async (dispatch) => {
+
   try {
-    dispatch({type:ADMIN_USER_DELETE_REQUEST})
+    dispatch({ type: ADMIN_USER_DELETE_REQUEST })
 
     const token = JSON.parse(localStorage.getItem("adminInfo"));
     console.log(token.token);
@@ -113,13 +113,13 @@ export const admindeleteUser = (id) => async(dispatch)=>{
         Authorization: "Bearer " + token.token,
       },
     };
-    
-    
-    const {data} = await axios.get("http://localhost:5000/admin/delete?id="+id,config)
-    console.log(data+"THIS IS ");
-    
 
-    dispatch({type:ADMIN_USER_DELETE_SUCCESS,payload:data})
+
+    const { data } = await axios.get("http://localhost:5000/admin/delete?id=" + id, config)
+    console.log(data + "THIS IS ");
+
+
+    dispatch({ type: ADMIN_USER_DELETE_SUCCESS, payload: data })
 
   } catch (error) {
     dispatch({
@@ -133,16 +133,16 @@ export const admindeleteUser = (id) => async(dispatch)=>{
 }
 
 
-export const adminLogout = () => async (dispatch) =>{
+export const adminLogout = () => async (dispatch) => {
   localStorage.removeItem("adminInfo")
-  dispatch({type:ADMIN_LOGOUT})
+  dispatch({ type: ADMIN_LOGOUT })
 }
 
 
-export const adminSearch =  (searchkeyword)=> async(dispatch)=>{
+export const adminSearch = (searchkeyword) => async (dispatch) => {
 
   try {
-    dispatch({type:ADMIN_SEARCH_REQUEST})
+    dispatch({ type: ADMIN_SEARCH_REQUEST })
     const token = JSON.parse(localStorage.getItem("adminInfo"));
     console.log(token.token);
     const config = {
@@ -150,10 +150,10 @@ export const adminSearch =  (searchkeyword)=> async(dispatch)=>{
         Authorization: "Bearer " + token.token,
       },
     };
-    
-    const {data} = await axios.post("http://localhost:5000/admin/search",{searchkeyword},config)
 
-    dispatch({type:ADMIN_SEARCH_SUCCESS,payload:data})
+    const { data } = await axios.post("http://localhost:5000/admin/search", { searchkeyword }, config)
+
+    dispatch({ type: ADMIN_SEARCH_SUCCESS, payload: data })
   } catch (error) {
     dispatch({
       type: ADMIN_SEARCH_FAIL,

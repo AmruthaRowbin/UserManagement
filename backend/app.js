@@ -19,7 +19,10 @@ app.set('view engine', 'jade');
 
 
 
-mongoose.connect('mongodb://localhost:27017/NOTEAPP')
+mongoose.connect('mongodb://0.0.0.0:27017/NOTEAPP', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
